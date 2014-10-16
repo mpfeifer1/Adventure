@@ -19,4 +19,5 @@ def situation(question, yes, no):
 
 situation("You are finished preparing for your journey! Do you leave home in search of adventure?" , "Cool!" , "Too Bad!")
 situation("You are hungry. Do you eat?" , "Cool!" , "That's gonna suck in like an hour or so...")
+situation("You see a wolf appear. Do you attack?" , "You die." , "It walks away.")
 print ("Game Over!")
