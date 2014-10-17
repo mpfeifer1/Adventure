@@ -1,11 +1,21 @@
+#Credit to the origonal author and myself
 print
 print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print ("Welcome to the Mountain of Mysteriousness")
 print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-print ("~~~By~J~Cornelius~Fifelolz~~~~~~~~~~~~~~~")
+print ("~~By~J~Cornelius~Fifelolz~~~and~~~Fifey~~")
 print
 print
 
+#Starting Definitions
+gameOver   = false
+name       = raw_input("What, adventurer, is thy name")
+attack     = 5
+defense    = 5
+maxHealth  = 10
+health     = maxHealth
+
+#Situation definitions TODO add improvements
 def situation(question, yes, no):
 	print (question)
 	response = raw_input("Y or N: ")
@@ -17,7 +27,6 @@ def situation(question, yes, no):
 		print ("Dolt...")
 	print
 
-situation("You are finished preparing for your journey! Do you leave home in search of adventure?" , "Cool!" , "Too Bad!")
-situation("You are hungry. Do you eat?" , "Cool!" , "That's gonna suck in like an hour or so...")
-situation("You see a wolf appear. Do you attack?" , "It was a fierce fight, but the shotgun trumps all!" , "It walks away.")
-print ("Game Over!")
+#Core game loop
+while (!gameOver)
+	
