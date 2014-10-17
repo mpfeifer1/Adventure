@@ -23,9 +23,9 @@ health     = maxHealth
 def situation(question, yes, no):
 	print (question)
 	response = raw_input("Y or N: ")
-	if response == ("y"):
+	if   (response == ("y")):
 		print (yes)
-	elif response == ("n"):
+	elif (response == ("n")):
 		print (no)
 	else:
 		print ("Dolt...")
@@ -41,16 +41,17 @@ def interpret(command):
 		quit()
 	else:
 		print ("Speak up!")
-		print
 
 #Commands
 def help():
+	print ("~~~~")
 	print ("Examine")
 	print ("Stats")
 	print ("Help")
 	print ("Quit")
 
 def stats():
+	print ("~~~~~")
 	print (name)
 	print ("Health : " + str(health) + " of " + str(maxHealth))
 	print ("Attack : " + str(attack))
@@ -60,7 +61,14 @@ def quit():
 	global gameOver
 	gameOver =1
 
+#Pregame setup
+print ("Start your adventure by typing help")
+
 #Core game loop
 while (gameOver == 0):
 	print
 	interpret(raw_input())
+
+#Closing statements
+tmp = sp.call('clear',shell=True)
+
