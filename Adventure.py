@@ -1,4 +1,8 @@
-#Credit to the origonal author and myself
+#Clear Screen
+import subprocess as sp
+tmp = sp.call('clear',shell=True)
+
+#Credit to authors
 print
 print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print ("Welcome to the Mountain of Mysteriousness")
@@ -33,6 +37,8 @@ def interpret(command):
 		help()
 	elif (command == "stats"):
 		stats()
+	elif (command == "quit"):
+		quit()
 	else:
 		print ("Speak up!")
 		print
@@ -41,6 +47,7 @@ def interpret(command):
 def help():
 	print ("Examine")
 	print ("Stats")
+	print ("Help")
 	print ("Quit")
 	print
 
@@ -51,7 +58,9 @@ def stats():
 	print ("defense: " + str(defense))
 	print
 
+def quit():
+	gameOver = 1
+
 #Core game loop
-while (not gameOver):
+while (gameOver == 0):
 	interpret(raw_input())
-	
