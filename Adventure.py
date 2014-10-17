@@ -15,7 +15,7 @@ defense    = 5
 maxHealth  = 10
 health     = maxHealth
 
-#Situation definitions TODO add improvements
+#Situation definitions TODO add improvements and more Situation types
 def situation(question, yes, no):
 	print (question)
 	response = raw_input("Y or N: ")
@@ -25,6 +25,23 @@ def situation(question, yes, no):
 		print (no)
 	else:
 		print ("Dolt...")
+	print
+
+#Raw command interpreter
+def interpret(command)
+
+#Commands
+def help()
+	print ("Examine")
+	print ("Stats")
+	print ("Quit")
+	print
+
+def stats()
+	print (name)
+	print ("Health : " + health + " of " + maxHealth)
+	print ("Attack : " + attack)
+	print ("defense: " + defense)
 	print
 
 #Core game loop
