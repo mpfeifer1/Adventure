@@ -18,6 +18,8 @@ attack     = 5
 defense    = 5
 maxHealth  = 10
 health     = maxHealth
+xposition  = 2
+yposition  = 2
 
 #Raw command interpreter
 def interpret(command):
@@ -25,6 +27,8 @@ def interpret(command):
 		help()
 	elif (command == "stats"):
 		stats()
+	elif (command == "examine"):
+		examine()
 	elif (command == "hack"):
 		hackGame()
 	elif (command == "quit"):
@@ -32,13 +36,18 @@ def interpret(command):
 	else:
 		print ("Speak up!")
 
-# User Commands
+#User Commands
 def help():
 	print ("~~~~")
 	print ("Examine")
 	print ("Stats")
 	print ("Help")
 	print ("Quit")
+
+def examine():
+	global xposition
+	global yposition
+	print (map[xposition][yposition])
 
 def stats():
 	print ("~~~~~")
@@ -65,6 +74,14 @@ def modifyStats(hp, mh, ak, df):
 	maxHealth = (maxHealth + mh)
 	attack    = (attack    + ak)
 	defense   = (defense   + df)
+
+#Map Definition 
+map = [["" for x in xrange(5)] for x in xrange(5)]
+map[0][0] = "You are in a forest"
+map[0][1] = "You are in a forest"
+map[0][2] = "You are in a forest"
+map[0][3] = "You are in a forest"
+map[0][4] = "You are in a forest"
 
 #Pregame setup
 print ("Start your adventure by typing help")
