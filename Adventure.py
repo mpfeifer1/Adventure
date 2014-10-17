@@ -19,30 +19,20 @@ defense    = 5
 maxHealth  = 10
 health     = maxHealth
 
-#Situation definitions TODO add improvements and more Situation types
-def situation(question, yes, no):
-	print (question)
-	response = raw_input("Y or N: ")
-	if   (response == ("y")):
-		print (yes)
-	elif (response == ("n")):
-		print (no)
-	else:
-		print ("Dolt...")
-	print
-
 #Raw command interpreter
 def interpret(command):
 	if   (command == "help"):
 		help()
 	elif (command == "stats"):
 		stats()
+	elif (command == "hack"):
+		hackGame()
 	elif (command == "quit"):
 		quit()
 	else:
 		print ("Speak up!")
 
-#Commands
+# User Commands
 def help():
 	print ("~~~~")
 	print ("Examine")
@@ -55,11 +45,26 @@ def stats():
 	print (name)
 	print ("Health : " + str(health) + " of " + str(maxHealth))
 	print ("Attack : " + str(attack))
-	print ("defense: " + str(defense))
+	print ("Defense: " + str(defense))
+
+def hackGame():
+	increase = int(raw_input("How much you wanna hack? "))
+	modifyStats(increase, increase, increase, increase)
 
 def quit():
 	global gameOver
 	gameOver =1
+
+#System Commands
+def modifyStats(hp, mh, ak, df):
+	global health
+	global maxHealth
+	global attack
+	global defense
+        health    = (health    + hp)
+	maxHealth = (maxHealth + mh)
+	attack    = (attack    + ak)
+	defense   = (defense   + df)
 
 #Pregame setup
 print ("Start your adventure by typing help")
@@ -71,4 +76,3 @@ while (gameOver == 0):
 
 #Closing statements
 tmp = sp.call('clear',shell=True)
-
