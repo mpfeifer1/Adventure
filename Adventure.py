@@ -49,18 +49,18 @@ def help():
 	print ("Stats")
 	print ("Help")
 	print ("Quit")
-	print
 
 def stats():
 	print (name)
 	print ("Health : " + str(health) + " of " + str(maxHealth))
 	print ("Attack : " + str(attack))
 	print ("defense: " + str(defense))
-	print
 
 def quit():
-	gameOver = 1
+	global gameOver
+	gameOver =1
 
 #Core game loop
 while (gameOver == 0):
+	print
 	interpret(raw_input())
