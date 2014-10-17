@@ -45,9 +45,16 @@ def help():
 	print ("Quit")
 
 def examine():
-	global xposition
-	global yposition
-	print (map[xposition][yposition])
+	object = raw_input("Examine what?")
+        global xposition
+        global yposition
+	if object == area:
+		print (map[xposition][yposition])
+	elif object == enemy:
+		print ("Something about the object. yeah.")
+
+def go():
+	direction = raw_input("Go where?")
 
 def stats():
 	print ("~~~~~")
