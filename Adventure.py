@@ -8,7 +8,7 @@ print
 print
 
 #Starting Definitions
-gameOver   = false
+gameOver   = 0
 name       = raw_input("What, adventurer, is thy name")
 attack     = 5
 defense    = 5
@@ -28,16 +28,23 @@ def situation(question, yes, no):
 	print
 
 #Raw command interpreter
-def interpret(command)
+def interpret(command):
+	if   (command == "help"):
+		help()
+	elif (command == "stats"):
+		stats()
+	else:
+		print ("Speak up!")
+		print
 
 #Commands
-def help()
+def help():
 	print ("Examine")
 	print ("Stats")
 	print ("Quit")
 	print
 
-def stats()
+def stats():
 	print (name)
 	print ("Health : " + health + " of " + maxHealth)
 	print ("Attack : " + attack)
@@ -45,5 +52,6 @@ def stats()
 	print
 
 #Core game loop
-while (!gameOver)
+while (not gameOver):
+	interpret(raw_input())
 	
