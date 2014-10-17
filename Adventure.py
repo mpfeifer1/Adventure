@@ -9,7 +9,7 @@ print
 
 #Starting Definitions
 gameOver   = 0
-name       = raw_input("What, adventurer, is thy name")
+name       = raw_input("What, adventurer, is thy name? ")
 attack     = 5
 defense    = 5
 maxHealth  = 10
@@ -46,9 +46,9 @@ def help():
 
 def stats():
 	print (name)
-	print ("Health : " + health + " of " + maxHealth)
-	print ("Attack : " + attack)
-	print ("defense: " + defense)
+	print ("Health : " + str(health) + " of " + str(maxHealth))
+	print ("Attack : " + str(attack))
+	print ("defense: " + str(defense))
 	print
 
 #Core game loop
