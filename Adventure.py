@@ -89,6 +89,16 @@ map[0][1] = "You are in a forest"
 map[0][2] = "You are in a forest"
 map[0][3] = "You are in a forest"
 map[0][4] = "You are in a forest"
+map[1][0] =
+map[1][1] =
+map[1][2] =
+map[1][3] =
+map[1][4] =
+map[2][0] =
+map[2][1] =
+map[2][2] =
+map[2][3] =
+map[2][4] =
 
 #Pregame setup
 print ("Start your adventure by typing help")
