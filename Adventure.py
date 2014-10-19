@@ -25,6 +25,8 @@ yposition  = 0
 def interpret(command):
 	if   (command == "help"):
 		help()
+	elif (command == "go"):
+		go()
 	elif (command == "stats"):
 		stats()
 	elif (command == "examine"):
@@ -40,6 +42,7 @@ def interpret(command):
 def help():
 	print ("~~~~")
 	print ("Examine")
+	print ("Go")
 	print ("Stats")
 	print ("Help")
 	print ("Quit")
@@ -55,6 +58,11 @@ def examine():
 
 def go():
 	direction = raw_input("Go where?")
+	if (direction == "up"):
+		global yPosition
+		yposition += 1
+	else:
+		print ("That's not a direction")
 
 def stats():
 	print ("~~~~~")
