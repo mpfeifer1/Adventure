@@ -18,8 +18,8 @@ attack     = 5
 defense    = 5
 maxHealth  = 10
 health     = maxHealth
-xposition  = 2
-yposition  = 2
+xposition  = 0
+yposition  = 0
 
 #Raw command interpreter
 def interpret(command):
@@ -45,12 +45,12 @@ def help():
 	print ("Quit")
 
 def examine():
-	object = raw_input("Examine what?")
+	object = raw_input("Examine what? ")
         global xposition
         global yposition
-	if object == area:
-		print (map[xposition][yposition])
-	elif object == enemy:
+	if object == "area":
+		print (map[xposition][yposition].description)
+	elif object == "enemy":
 		print ("Something about the object. yeah.")
 
 def go():
@@ -82,23 +82,35 @@ def modifyStats(hp, mh, ak, df):
 	attack    = (attack    + ak)
 	defense   = (defense   + df)
 
+#MapSquare Class
+class MapSquare:
+	def __init__(self, intro, description, walkable):
+		self.intro       = intro
+		self.description = description
+		self.walkable    = walkable
+
 #Map Definition 
-map = [["" for x in xrange(5)] for x in xrange(5)]
-map[0][0] = "You are in a forest"
-map[0][1] = "You are in a forest"
-map[0][2] = "You are in a forest"
-map[0][3] = "You are in a forest"
-map[0][4] = "You are in a forest"
-map[1][0] =
-map[1][1] =
-map[1][2] =
-map[1][3] =
-map[1][4] =
-map[2][0] =
-map[2][1] =
-map[2][2] =
-map[2][3] =
-map[2][4] =
+map = [[MapSquare for x in xrange(5)] for x in xrange(5)]
+
+forest = MapSquare("You look around to see lush green forests. Definitely not the way to go, but still very beautiful.", "You are in a forest", 0)
+
+
+
+map[0][0] = forest
+map[0][1] = forest
+map[0][2] = forest
+map[0][3] = forest
+map[0][4] = forest
+map[1][0] = forest
+map[1][1] = forest
+map[1][2] = forest
+map[1][3] = forest
+map[1][4] = forest
+map[2][0] = forest
+map[2][1] = forest
+map[2][2] = forest
+map[2][3] = forest
+map[2][4] = forest
 
 #Pregame setup
 print ("Start your adventure by typing help")
