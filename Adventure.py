@@ -109,16 +109,30 @@ map[0][1] = forest
 map[0][2] = forest
 map[0][3] = forest
 map[0][4] = forest
+
 map[1][0] = forest
 map[1][1] = forest
 map[1][2] = forest
 map[1][3] = forest
 map[1][4] = forest
+
 map[2][0] = forest
 map[2][1] = forest
 map[2][2] = forest
 map[2][3] = forest
 map[2][4] = forest
+
+map[3][0] = forest
+map[3][1] = forest
+map[3][2] = forest
+map[3][3] = forest
+map[3][4] = forest
+
+map[4][0] = forest
+map[4][1] = forest
+map[4][2] = forest
+map[4][3] = forest
+map[4][4] = forest
 
 #Pregame setup
 print ("Start your adventure by typing help")
