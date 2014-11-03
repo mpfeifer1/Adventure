@@ -58,17 +58,15 @@ def examine():
 
 def go():
 	direction = raw_input("Go where?")
-	if (direction == "up"):
-		global yposition
+	global yposition
+	global xposition
+	if   (direction == "up"):
 		yposition += 1
 	elif (direction == "down"):
-		global yposition
 		yposition -= 1
 	elif (direction == "left"):
-		global xposition
 		xposition -= 1
 	elif (direction == "right"):
-		global xposition
 		xposition += 1
 	else:
 		print ("That's not a direction")
